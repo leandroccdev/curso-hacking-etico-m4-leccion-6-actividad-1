@@ -1,0 +1,17 @@
+<?php
+$pdo_host = '';
+$pdo_user = '';
+$pdo_pass = '';
+$pdo_db   = '';
+$pdo_charset = 'utf8mb4';
+
+// Configurar PDO
+$pdo_dsn = "mysql:host=$pdo_host;dbname=$pdo_db;charset=$pdo_charset";
+$pdo_options = [
+    // Ante errores lanza excepciones
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    // Devolver arreglos asociativos por defecto
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+?>
